@@ -13,16 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
             const answer = this.nextElementSibling;
-            const isActive = answer.classList.contains('active');
+            const isActive = faqItem.classList.contains('active');
             
             // Fecha todas as respostas
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
             document.querySelectorAll('.faq-answer').forEach(item => {
                 item.classList.remove('active');
             });
             
             // Abre a resposta clicada se não estava ativa
             if (!isActive) {
+                faqItem.classList.add('active');
                 answer.classList.add('active');
             }
         });
