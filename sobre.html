@@ -57,9 +57,6 @@
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- WhatsApp Float Button -->
-    <div id="whatsapp-placeholder"></div>
-
     <script src="/js/main.js"></script>
     <script>
         fetch('/components/header.html')
@@ -78,10 +75,6 @@
         fetch('/components/footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-
-        fetch('/components/whatsapp.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('whatsapp-placeholder').innerHTML = data);
     </script>
 </body>
 </html>
