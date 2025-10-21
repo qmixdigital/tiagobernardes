@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o Dr. Tiago Bernardes, sua formação e experiência como Ortopedista Especialista em Quadril em Goiânia.">
+    <title>Sobre Dr. Tiago Bernardes - Ortopedista Especialista em Quadril</title>
+    <link rel="icon" type="image/webp" href="/imagens/favicon-drtiago.webp">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Sobre Dr. Tiago Bernardes</h1>
+        <p>Conheça minha trajetória e formação</p>
+    </section>
+
+    <!-- Formação e Atuação -->
+    <section id="formacao">
+        <h2>Formação e Atuação</h2>
+        
+        <div class="cards-container">
+            <div class="card">
+                <img src="/imagens/ortopedista-especialista-em-quadril-goiania.webp" alt="Dr. Tiago Bernardes" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+            </div>
+            <div class="card">
+                <h3>Dr. Tiago Bernardes</h3>
+                <p>[Texto introdutório sobre o médico será inserido]</p>
+            </div>
+        </div>
+
+        <h3>Formação</h3>
+        <p>[Texto detalhado sobre formação será inserido]</p>
+
+        <h3>Atuação</h3>
+        <p>[Texto sobre atuação profissional será inserido]</p>
+    </section>
+
+    <!-- Locais de Atendimento -->
+    <section id="locais" style="background: var(--light-bg);">
+        <h2>Locais de atendimento em Goiânia</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>COE</h3>
+                <p>[Informações completas do COE serão inseridas]</p>
+            </div>
+            <div class="card">
+                <h3>Clínica do Esporte</h3>
+                <p>[Informações completas da Clínica do Esporte serão inseridas]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- WhatsApp Float Button -->
+    <div id="whatsapp-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navMenu = document.querySelector('nav ul');
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        navMenu.classList.toggle('active');
+                    });
+                }
+            });
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        fetch('/components/whatsapp.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('whatsapp-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

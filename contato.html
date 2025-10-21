@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Dr. Tiago Bernardes. Agende sua consulta em Goiânia.">
+    <title>Contato - Dr. Tiago Bernardes</title>
+    <link rel="icon" type="image/webp" href="/imagens/favicon-drtiago.webp">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Contato</h1>
+        <p>Agende sua consulta</p>
+    </section>
+
+    <!-- Locais de Atendimento -->
+    <section id="locais">
+        <h2>Locais de Atendimento</h2>
+        
+        <div class="cards-container">
+            <div class="card">
+                <h3>COE</h3>
+                <p><strong>Endereço:</strong> [Endereço completo será inserido]</p>
+                <p><strong>Telefone:</strong> [Telefone será inserido]</p>
+                <p><strong>Horário:</strong> [Horário será inserido]</p>
+            </div>
+            
+            <div class="card">
+                <h3>Clínica do Esporte</h3>
+                <p><strong>Endereço:</strong> [Endereço completo será inserido]</p>
+                <p><strong>Telefone:</strong> [Telefone será inserido]</p>
+                <p><strong>Horário:</strong> [Horário será inserido]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- WhatsApp Float Button -->
+    <div id="whatsapp-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navMenu = document.querySelector('nav ul');
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        navMenu.classList.toggle('active');
+                    });
+                }
+            });
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        fetch('/components/whatsapp.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('whatsapp-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Áreas de Atuação do Dr. Tiago Bernardes: Cirurgia do Quadril, Trauma, Prótese e Ortopedia Geral em Goiânia.">
+    <title>Áreas de Atuação - Dr. Tiago Bernardes</title>
+    <link rel="icon" type="image/webp" href="/imagens/favicon-drtiago.webp">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Áreas de Atuação</h1>
+        <p>Especialidades e tratamentos oferecidos</p>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="especialidades">
+        <h2>Especialidades</h2>
+        
+        <div class="cards-container">
+            <div class="card">
+                <h3>Cirurgia do Quadril</h3>
+                <p>[Texto detalhado sobre cirurgia do quadril será inserido]</p>
+            </div>
+            
+            <div class="card">
+                <h3>Cirurgia do Trauma e Ortopedia</h3>
+                <p>[Texto detalhado sobre trauma e ortopedia será inserido]</p>
+            </div>
+            
+            <div class="card">
+                <h3>Prótese de Quadril</h3>
+                <p>[Texto detalhado sobre prótese de quadril será inserido]</p>
+            </div>
+            
+            <div class="card">
+                <h3>Ortopedia Geral</h3>
+                <p>[Texto detalhado sobre ortopedia geral será inserido]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fale Conosco -->
+    <section id="fale-conosco" style="background: var(--light-bg);">
+        <h2>Fale Conosco</h2>
+        <p style="text-align: center;">Entre em contato para agendar sua consulta</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/contato.html" class="cta-button">Entrar em Contato</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- WhatsApp Float Button -->
+    <div id="whatsapp-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data)
+            .then(() => {
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navMenu = document.querySelector('nav ul');
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        navMenu.classList.toggle('active');
+                    });
+                }
+            });
+
+        fetch('/components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+        fetch('/components/whatsapp.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('whatsapp-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>
