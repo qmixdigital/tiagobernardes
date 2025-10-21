@@ -117,13 +117,11 @@ nav a:hover::after {
     position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
-    padding: 0;
-    margin: 0;
+    padding: 8rem 0;
     overflow: hidden;
     min-height: 90vh;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    display: flex;
+    align-items: center;
 }
 
 .hero::before {
@@ -151,16 +149,16 @@ nav a:hover::after {
 }
 
 .hero-content {
-    max-width: 1600px;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
-    padding: 8rem 5rem;
+    padding: 0 3rem;
     position: relative;
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: 5rem;
     align-items: center;
-    min-height: 90vh;
 }
 
 .hero-text {
