@@ -117,6 +117,7 @@ nav a:hover::after {
     padding: 0;
     overflow: hidden;
     min-height: 90vh;
+    width: 100%;
 }
 
 .hero::before {
@@ -144,14 +145,14 @@ nav a:hover::after {
 }
 
 .hero-content {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 8rem 3rem;
+    padding: 8rem 5rem;
     position: relative;
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 6rem;
     align-items: center;
     min-height: 90vh;
 }
