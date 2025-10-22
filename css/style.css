@@ -66,7 +66,7 @@ header {
     align-items: center;
     gap: 0.5rem;
     background: #1ea952;
-    color: var(--white);
+    color: #041243;
     padding: 0.6rem 1.2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -724,7 +724,7 @@ h3.hero-subtitle {
     justify-content: center;
     gap: 0.8rem;
     background: #1ea952;
-    color: var(--white);
+    color: #041243;
     padding: 1.2rem 2rem;
     text-decoration: none;
     font-weight: 700;
