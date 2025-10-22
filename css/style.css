@@ -70,7 +70,7 @@ header {
     padding: 0.6rem 1.2rem;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 0.75rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
@@ -281,7 +281,7 @@ h3.hero-subtitle {
 .section-subtitle {
     text-align: center;
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: #5a5a5a;
     margin-bottom: 3rem;
 }
 
@@ -513,6 +513,13 @@ h3.hero-subtitle {
     justify-content: center;
     font-weight: 700;
     font-size: 1.3rem;
+}
+
+.testimonial h3 {
+    color: var(--primary);
+    margin-bottom: 0.2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .testimonial h4 {
@@ -768,13 +775,15 @@ footer {
 }
 
 .footer-section a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    transition: color 0.3s;
+    color: rgba(255,255,255,0.9);
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.3);
+    transition: all 0.3s;
 }
 
 .footer-section a:hover {
     color: var(--gold);
+    text-decoration-color: var(--gold);
 }
 
 .footer-bottom {
@@ -805,18 +814,20 @@ footer {
     margin-top: 0.8rem;
     font-size: 0.7rem;
     font-weight: 300;
-    opacity: 0.35;
+    opacity: 0.5;
 }
 
 .footer-dev a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    transition: opacity 0.3s;
-    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.4);
+    transition: all 0.3s;
+    font-weight: 400;
 }
 
 .footer-dev a:hover {
-    opacity: 0.8;
+    color: var(--gold);
+    text-decoration-color: var(--gold);
 }
 
 .social-links {
